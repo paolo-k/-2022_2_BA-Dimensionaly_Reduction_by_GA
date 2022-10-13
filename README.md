@@ -44,7 +44,9 @@ Tutorial Homework 1(Business Analytics class in Industrial &amp; Management Engi
 4. 결과 분석
 
  (4-1) 성능지표 변화
+ 
 ![image](https://user-images.githubusercontent.com/106015570/195500049-f7aba6e0-232c-47a8-b002-5a906fb2e53a.png)
+
   - 5회 정도의 iteration으로 변곡점 도달
   - Mutate를 거치면서 5.3573에서 5.3569로 성능지표 미량 변화
 
