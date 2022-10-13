@@ -34,7 +34,16 @@ Tutorial Homework 1(Business Analytics class in Industrial &amp; Management Engi
   - 앞서 정의된 모든 과정을 함수로 정의
   - loop 문을 이용하여 END까지 iteration 수행, END 도달 후 알고리즘 종료
 
-4. 결과 설명
+4. 결과 분석
+ 1) 성능지표 변화
 ![image](https://user-images.githubusercontent.com/106015570/195500049-f7aba6e0-232c-47a8-b002-5a906fb2e53a.png)
+  - 5회 정도의 iteration으로 변곡점 도달
+  - Mutate를 거치면서 5.3573에서 5.3569로 성능지표 미량 변화
+ 2) 최종 chromosome
 
-6. 
+[[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 5.356858545742943]
+
+   - 선택된 변수 : RM, LSTAT, B, PTRATIO, ZN, CHAS, AGE, RAD, DIS, TAX
+   - GA를 이용하여 13개 변수를 10개로 축소
+   - 다만 차원 축소 측면에서 많은 양이 축소되지는 않음 
+   - 차원을 더 많이 축소하기 위해서는, GA와 같은 선택 방법보다는 PCA, MDS 등 추출 방법을 쓰는 것이 효과적일 것으로 보임 
