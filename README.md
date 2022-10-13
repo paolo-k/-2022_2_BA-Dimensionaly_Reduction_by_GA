@@ -11,35 +11,35 @@ Tutorial Homework 1(Business Analytics class in Industrial &amp; Management Engi
  - 코드 개요 : Genetic Algorithm을 이용한 Dimensionaly reduction
  - Hyper parameter 목록 : MUT(변이확률, %로 표현 : 변이확률 5%는 MUTE = 0.05가 아닌 MUTE = 5로 입력), END(iteration 횟수, iteration 횟수를 채우면 알고리즘 종료), popCOUNT(해집단 내 Chromosome 개수), selCOUNT(총 selection 개수), numCOL(Chromosome 1개 당 유전자 개수)
  - 코드 구성
- 1) 분석 준비
+ (3-1) 분석 준비
   - pandas 등 기초적인 분석 패키지와 머신러닝 패키지 sklearn import
   - sklearn에서 boston dataset loading(X, Y concat 한 후, .json 파일 형태로 저장함)
- 2) Initialization
+ (3-2) Initialization
   - hyperparameter 설정 : 변이확률 5%, iteration 횟수 200회, population size 50, selection size 25
   - 초기 해 설정
- 3) Fitness Evaluation
+ (3-3) Fitness Evaluation
   - 사용된 fitness fuction : 다중회귀모형의 Root Mean Square Error(RMSE)
   - chromosome별로 설정된 해에 따라 사용되는 독립변수 구분
   - 구분된 독립변수에 따라 종속변수에 대한 다중회귀모형 구축
   - 구축된 다중회귀모형의 RMSE를 GA 성능지표로 활용(낮을수록 우수한 성능)
- 4) Select the superiors
+ (3-4) Select the superiors
   - chromosome 내 각 gene에 대하여 다음과 같이 가중치 도출 : Max(gene) - gene (낮을수록 좋은 성능지표의 특성 반영)
   - 가중치에 따라 다음 세대에 유전자를 전달할 chromosome selection
- 5) Crossover
+ (3-5) Crossover
   - 1-crossover point 방식을 이용한 상속
   - 설계된 상속에 따라 crossover 연산자 구축
- 6) Mutation
+ (3-6) Mutation
   - 설정된 Mutate rate(5%)에 따라 일부 유전자 변환(0 -> 1 or 1 -> 0)
- 7) Result
+ (3-7) Result
   - 앞서 정의된 모든 과정을 함수로 정의
   - loop 문을 이용하여 END까지 iteration 수행, END 도달 후 알고리즘 종료
 
 4. 결과 분석
- 1) 성능지표 변화
+ (4-1) 성능지표 변화
 ![image](https://user-images.githubusercontent.com/106015570/195500049-f7aba6e0-232c-47a8-b002-5a906fb2e53a.png)
   - 5회 정도의 iteration으로 변곡점 도달
   - Mutate를 거치면서 5.3573에서 5.3569로 성능지표 미량 변화
- 2) 최종 chromosome
+ (4-2) 최종 chromosome
 
 [[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 5.356858545742943]
 
